@@ -16,7 +16,7 @@ function MovieList(props) {
                     />
                     {/* passer le props language qui arrive de allMovie à MovieItem */}
                     <Link to={{ pathname: `/movie-details/${movie.id}`, language: props.language }}>
-                        <button>Detail</button>
+                        {props.language === "en" ? <button>Detail</button> : <button>Détail</button>}
                     </Link>
                 </Fragment>
             )}

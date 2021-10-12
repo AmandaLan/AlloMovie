@@ -56,10 +56,6 @@ function AllMovie() {
             value: "en",
             name: "En"
         },
-        {
-            value: "ja",
-            name: "Ja"
-        },
 
     ]
 
