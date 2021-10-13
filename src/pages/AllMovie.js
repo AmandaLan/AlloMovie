@@ -4,6 +4,7 @@ import Pagination from "../components/layout/Pagination";
 import MovieList from "../components/movies/MovieList";
 import MovieSearch from "../components/movies/MovieSearch";
 import MovieSelect from "../components/movies/MovieSelect";
+import MovieUpoming from "../components/movies/MovieUpoming";
 
 import classes from "./AllMovie.module.css"
 
@@ -57,7 +58,7 @@ function AllMovie() {
             name: "En"
         },
 
-    ]
+    ];
 
     useEffect(() => {
 
@@ -71,23 +72,24 @@ function AllMovie() {
             .then(data => {
                 setMovies(data.results);
             })
-    }, [page, search, languageCountry, language])
-
-
+    }, [page, search, languageCountry, language]);
 
     return (
         <div className={classes.movieTitle}>
+
+            <MovieUpoming/>
+
             <h1>Tous les films</h1>
             {/* input recherche film */}
-            
-            <MovieSearch search={search} setSearch={setSearch}/>
+
+            <MovieSearch search={search} setSearch={setSearch} />
 
             <MovieSelect name="country" value={languageCountry} setValue={setLanguageCountry}>
 
                 <option value="">--Choisissez l'origine du film--</option>
                 {optionLanguageCountry.map(optionLanguageCountries => {
                     return (
-                        <option value={optionLanguageCountries.value}>{optionLanguageCountries.name}</option>
+                        <option key={optionLanguageCountries.value} value={optionLanguageCountries.value}>{optionLanguageCountries.name}</option>
                     )
                 })}
                 {/*<option value="fr">France</option>
@@ -98,7 +100,7 @@ function AllMovie() {
                 <option value="">--Choisissez la langue--</option>
                 {optionLanguage.map(optionLanguages => {
                     return (
-                        <option value={optionLanguages.value}>{optionLanguages.name}</option>
+                        <option key={optionLanguages.value} value={optionLanguages.value}>{optionLanguages.name}</option>
                     )
                 })}
 

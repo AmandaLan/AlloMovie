@@ -1,7 +1,7 @@
 import classes from "./MovieSelect.module.css"
 
 function MovieSelect(props) {
-    console.log(props.languageCountry)
+
     let tempValue = props.value 
     let tempSetValue = props.setValue
     return (

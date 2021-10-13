@@ -1,0 +1,84 @@
+/* .carousel {
+    width: 100%;
+}
+
+.upcomingBG {
+    margin: 0 auto;
+}*/
+.upcomingBG img {
+    opacity: 0.5;
+    filter: blur(4px);
+}
+.activeUpcomingBG {
+    display: none;
+}
+
+.upcomingSlider {
+
+    display: flex;
+    justify-content: center;
+    background-color: rgb(12, 12, 12);
+
+    transform: scale(1.1);
+    opacity: 1;
+}
+.activeUpcomingSlider {
+   margin-top: 25rem;
+
+    display: flex;
+    background-color: rgb(12, 12, 12);
+
+    transform: scale(0.6);
+    transition: transform 300ms;
+    opacity: 0.5;
+}
+
+h3,
+p {
+    color: white;
+    padding: 1rem;
+}
+p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+.arrowLeft {
+    color: rgb(255, 174, 0);
+    border-radius: 10rem;
+    padding: 2rem;
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+    left: 0%;
+    top: 50%;
+}
+
+.arrowLeft svg {
+    transition: color 300ms;
+}
+
+.arrowLeft svg:hover {
+    color: yellow;
+}
+
+.arrowRight {
+    color: rgb(255, 174, 0);
+    padding: 2rem;
+    border-radius: 10rem;
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+    right: 0%;
+    top: 50%;
+}
+
+.arrowRight svg {
+    transition: color 300ms;
+}
+
+.arrowRight svg:hover {
+    color: yellow;
+}

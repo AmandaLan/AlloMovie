@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 
 function MovieDetails(props) {
     const [movies, setMovies] = useState([]);
-    console.log(props)
     const idFromLink = props.match.params.id
     useEffect(() => {
 
