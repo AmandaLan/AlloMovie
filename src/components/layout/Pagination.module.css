@@ -1,6 +1,8 @@
 .buttonPagination {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-right: 6rem;
+    margin-top: 6rem;
 }
 
 .buttonPagination button {

@@ -6,13 +6,14 @@ import { Fragment } from "react/cjs/react.production.min";
 function MovieList(props) {
     // console.log(props)
     return (
-        <ul className={classes.movieList}>
+        <div className={classes.movieList}>
             {props.movies.map(movie =>
                 <Fragment key={movie.id}>
                     <MovieItem
                         id={movie.id}
                         poster_path={movie.poster_path}
                         title={movie.title}
+                        vote_average={movie.vote_average}
                     />
                     {/* passer le props language qui arrive de allMovie à MovieItem */}
                     
@@ -20,7 +21,7 @@ function MovieList(props) {
             )}
 
 
-        </ul>
+        </div>
     )
 }
 

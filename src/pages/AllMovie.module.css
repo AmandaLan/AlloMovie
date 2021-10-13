@@ -1,11 +1,35 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-.movieTitle h1{
-    display: flex;
-    justify-content: center;
 
+
+.movieTitle hr {
+    width: 80%;
+    color: rgb(255, 174, 0);
+}
+
+.movieFilter {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.movieFilter h1 {
     color: white;
 }
 
+.movieFilter input {
+    background-color: transparent;
+    border: 1px solid rgb(255, 174, 0);
+    border-radius: 2rem;
+    padding: 0.5rem;
+}
 
+.movieFilter select {
+    background-color: transparent;
+    color: rgb(255, 174, 0);
+    border: 1px solid rgb(255, 174, 0);
+    border-radius: 2rem;
+    padding: 0.5rem;
+}

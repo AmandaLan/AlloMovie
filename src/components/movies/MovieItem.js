@@ -20,23 +20,25 @@ function MovieItem(props) {
             })
         }
     }
-
+    console.log(props)
     return (
-        <li className={classes.movieItem}>
+        <div className={classes.movieItem}>
             <div>
                 <img src={`https://image.tmdb.org/t/p/w200` + props.poster_path} alt={props.original_title} />
             </div>
-            <div>
-                <p>{props.title}</p>
+            <div className={classes.movieVote}>
+                <h3>{props.title}</h3>
+                <p>{props.vote_average}/10</p>
             </div>
-            <div>
+    
+            <div className={classes.button}>
                 <button onClick={toggleFavoriteStatueHandler}>{itemIsFavorite ? "Supprimer des favoris" : "Ajouter au favoris"}</button>
                 <Link to={{ pathname: `/movie-details/${props.id}`, language: props.language }}>
                     {props.language === "en" ? <button>Detail</button> : <button>Détail</button>}
                 </Link>
             </div>
 
-        </li>
+        </div>
     )
 }
 

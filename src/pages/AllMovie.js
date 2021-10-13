@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 
 import Pagination from "../components/layout/Pagination";
+import Footer from "../components/movies/Footer";
 import MovieList from "../components/movies/MovieList";
 import MovieSearch from "../components/movies/MovieSearch";
 import MovieSelect from "../components/movies/MovieSelect";
@@ -75,41 +76,48 @@ function AllMovie() {
     }, [page, search, languageCountry, language]);
 
     return (
-        <div className={classes.movieTitle}>
+        <div className={classes.movieHome}>
 
-            <MovieUpoming/>
+            <MovieUpoming />
 
-            <h1>Tous les films</h1>
-            {/* input recherche film */}
+            <div className={classes.movieFilter}>
+                <h1>Tous les films</h1>
 
-            <MovieSearch search={search} setSearch={setSearch} />
+                {/* input recherche film */}
+                <MovieSearch search={search} setSearch={setSearch} />
 
-            <MovieSelect name="country" value={languageCountry} setValue={setLanguageCountry}>
+                <MovieSelect name="country" value={languageCountry} setValue={setLanguageCountry}>
 
-                <option value="">--Choisissez l'origine du film--</option>
-                {optionLanguageCountry.map(optionLanguageCountries => {
-                    return (
-                        <option key={optionLanguageCountries.value} value={optionLanguageCountries.value}>{optionLanguageCountries.name}</option>
-                    )
-                })}
-                {/*<option value="fr">France</option>
+                    <option value="">--Choisissez l'origine du film--</option>
+                    {optionLanguageCountry.map(optionLanguageCountries => {
+                        return (
+                            <option key={optionLanguageCountries.value} value={optionLanguageCountries.value}>{optionLanguageCountries.name}</option>
+                        )
+                    })}
+                    {/*<option value="fr">France</option>
                 <option value="ja">Japon</option>
                 <option value="en">Anglais</option> */}
-            </MovieSelect>
-            <MovieSelect name="language" value={language} setValue={setLanguage}>
-                <option value="">--Choisissez la langue--</option>
-                {optionLanguage.map(optionLanguages => {
-                    return (
-                        <option key={optionLanguages.value} value={optionLanguages.value}>{optionLanguages.name}</option>
-                    )
-                })}
+                </MovieSelect>
+                <MovieSelect name="language" value={language} setValue={setLanguage}>
+                    <option value="">--Choisissez la langue--</option>
+                    {optionLanguage.map(optionLanguages => {
+                        return (
+                            <option key={optionLanguages.value} value={optionLanguages.value}>{optionLanguages.name}</option>
+                        )
+                    })}
+                </MovieSelect>
+            </div>
 
-            </MovieSelect>
+            <hr />
+
             <Pagination page={page} setPage={setPage} />
             {/* Passer les props language de allmovie a movie liste */}
             <MovieList movies={movies} language={language} />
             {/* <MovieList movies={movies} id={() => handleClick(plant.id)}/> */}
             <Pagination page={page} setPage={setPage} />
+
+            <Footer />
+
         </div>
     )
 }

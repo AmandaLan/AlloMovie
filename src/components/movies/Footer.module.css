@@ -1,0 +1,27 @@
+.footer {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+/* .lines {
+    width: 100px;
+    position: relative;
+}
+
+.lines::after, .lines::before {
+    content: '';
+    position: absolute;
+    margin: auto;
+    height: 1.5px;
+    background: rgb(255, 174, 0);
+    width: 45%;    
+    top: 45%;
+}
+.lines::after {
+    left: 0;
+}
+
+.lines::before {
+    right: 0;
+} */
