@@ -28,7 +28,7 @@ function MovieUpoming() {
 
     const carouselSettings = {
         autoplay: true,
-        autoplaySpeed: 6000,
+        autoplaySpeed: 5000,
         speed: 300,
         centerMode: true,
         centerPadding: 0,
@@ -64,11 +64,11 @@ function MovieUpoming() {
                     return (
                         <div key={movie.id} >
                             <div className={idx === imageIndex ? classes.upcomingBG : classes.activeUpcomingBG}>
-                                <img style={{width: "100%", height:"80vh", objectFit: "cover"}} src={`https://image.tmdb.org/t/p/w300` + movie.backdrop_path} alt={movie.title} />
+                                <img style={{width: "100%", height:"250px", objectFit: "cover"}} src={`https://image.tmdb.org/t/p/w300` + movie.backdrop_path} alt={movie.title} />
                             </div>
 
                             <div className={idx === imageIndex ? classes.upcomingSlider : classes.activeUpcomingSlider}>
-                                <img src={`https://image.tmdb.org/t/p/w300` + movie.poster_path} alt={movie.title} />
+                                <img src={`https://image.tmdb.org/t/p/w200` + movie.poster_path} alt={movie.title} />
                                 <div>
                                     <h3>{movie.title}</h3>
                                     <p>{movie.overview}</p>

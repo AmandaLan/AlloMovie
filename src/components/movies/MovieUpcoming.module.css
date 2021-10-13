@@ -1,35 +1,27 @@
-/* .carousel {
-    width: 100%;
-}
-
-.upcomingBG {
-    margin: 0 auto;
-}*/
 .upcomingBG img {
     opacity: 0.5;
     filter: blur(4px);
+    transform: scale(3);    
 }
 .activeUpcomingBG {
-    display: none;
+    opacity: 0;
 }
 
 .upcomingSlider {
 
     display: flex;
-    justify-content: center;
     background-color: rgb(12, 12, 12);
 
     transform: scale(1.1);
     opacity: 1;
 }
-.activeUpcomingSlider {
-   margin-top: 25rem;
 
+.activeUpcomingSlider {
     display: flex;
     background-color: rgb(12, 12, 12);
 
     transform: scale(0.6);
-    transition: transform 300ms;
+    transition: transform 600ms;
     opacity: 0.5;
 }
 
@@ -42,7 +34,7 @@ p {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 6; /* number of lines to show */
+    -webkit-line-clamp: 2; /* number of lines to show */
     -webkit-box-orient: vertical;
 }
 .arrowLeft {
@@ -53,7 +45,7 @@ p {
     cursor: pointer;
     z-index: 10;
     left: 0%;
-    top: 50%;
+    top: 65%;
 }
 
 .arrowLeft svg {
@@ -72,7 +64,7 @@ p {
     cursor: pointer;
     z-index: 10;
     right: 0%;
-    top: 50%;
+    top: 65%;
 }
 
 .arrowRight svg {
