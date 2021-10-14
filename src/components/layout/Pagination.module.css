@@ -2,7 +2,7 @@
     display: flex;
     justify-content: flex-end;
     margin-right: 6rem;
-    margin-top: 6rem;
+    margin-top: 2rem;
 }
 
 .buttonPagination button {
@@ -12,7 +12,7 @@
     padding: 1rem;
     color: rgb(255, 174, 0);
 
-    margin-bottom: 2rem;
+
 }
 
 .prev {

@@ -1,0 +1,79 @@
+.detailConteiner {
+    margin: 0 auto;
+}
+
+.detailVideo iframe {
+    width: 100vw;
+    height: 100vh;
+  
+}
+
+.detailVideo {
+
+    position: absolute;
+}
+
+.detailCard {
+    position: relative;
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    background-color: rgb(12, 12, 12);
+}
+
+.detailGraduent {
+    background-color: black;
+    position: relative;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.detail {
+    padding: 2rem;
+}
+
+.detail h1 {
+    color: white;
+}
+.detail p {
+    color: white;
+}
+
+.similarCarousel {
+    width: 70%;
+    margin: 6rem auto;
+}
+
+.arrowLeft {
+    color: white;
+    background-color: rgb(255, 174, 0);
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+
+    left: 0;
+    bottom: 50%;
+}
+.arrowRight {
+    color: white;
+    background-color: rgb(255, 174, 0);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 50%;
+}

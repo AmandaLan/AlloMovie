@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Slider from "react-slick";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa"
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 import classes from "./MovieUpcoming.module.css"
 
@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 function MovieUpoming() {
     const [movies, setMovies] = useState([]);
-    const [imageIndex, setImageIndex] = useState(0)
+    const [imageIndex, setImageIndex] = useState(0);
 
     const NextArrow = ({ onClick }) => {
         return (
@@ -70,7 +70,7 @@ function MovieUpoming() {
                             <div className={idx === imageIndex ? classes.upcomingSlider : classes.activeUpcomingSlider}>
                                 <img src={`https://image.tmdb.org/t/p/w200` + movie.poster_path} alt={movie.title} />
                                 <div>
-                                    <h3>{movie.title}</h3>
+                                    <h3 className={classes.upcommingDetail}>{movie.title}</h3>
                                     <p>{movie.overview}</p>
                                 </div>
 

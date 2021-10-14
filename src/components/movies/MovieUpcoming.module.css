@@ -1,14 +1,13 @@
 .upcomingBG img {
     opacity: 0.5;
     filter: blur(4px);
-    transform: scale(3);    
+    transform: scale(3);
 }
 .activeUpcomingBG {
     opacity: 0;
 }
 
 .upcomingSlider {
-
     display: flex;
     background-color: rgb(12, 12, 12);
 
@@ -24,19 +23,20 @@
     transition: transform 600ms;
     opacity: 0.5;
 }
-
-h3,
-p {
+.upcommingDetail h1 {
     color: white;
     padding: 1rem;
 }
-p {
+.upcommingDetail p {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2; /* number of lines to show */
     -webkit-box-orient: vertical;
+    color: white;
+    padding: 1rem;
 }
+
 .arrowLeft {
     color: rgb(255, 174, 0);
     border-radius: 10rem;
@@ -48,14 +48,6 @@ p {
     top: 65%;
 }
 
-.arrowLeft svg {
-    transition: color 300ms;
-}
-
-.arrowLeft svg:hover {
-    color: yellow;
-}
-
 .arrowRight {
     color: rgb(255, 174, 0);
     padding: 2rem;
@@ -65,12 +57,4 @@ p {
     z-index: 10;
     right: 0%;
     top: 65%;
-}
-
-.arrowRight svg {
-    transition: color 300ms;
-}
-
-.arrowRight svg:hover {
-    color: yellow;
 }

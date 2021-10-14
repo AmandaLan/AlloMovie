@@ -1,7 +1,7 @@
 .movieList {
     display: flex;
     flex-wrap: wrap;
-    margin: 6rem;
+    margin: 2rem 6rem 2rem 6rem;
 }
 .movieItem {
     flex-basis: 20%;
