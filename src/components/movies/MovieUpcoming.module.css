@@ -23,7 +23,7 @@
     transition: transform 600ms;
     opacity: 0.5;
 }
-.upcommingDetail h1 {
+.upcommingDetail h3 {
     color: white;
     padding: 1rem;
 }

@@ -1,11 +1,9 @@
-import classes from "./MovieSelect.module.css"
-
 function MovieSelect(props) {
 
     let tempValue = props.value 
     let tempSetValue = props.setValue
     return (
-        <div className={classes.allSelect}>
+        <div>
 
             <select 
             id={props.id}

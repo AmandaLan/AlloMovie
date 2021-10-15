@@ -56,7 +56,7 @@ function MovieUpoming() {
     }, []);
     console.log(movies)
     return (
-        <div className={classes.carousel}>
+        <div className={classes.carouselUpcoming}>
             <Slider {...carouselSettings} >
                 {/* les points d'interrogation ca permet de dire "execute ce qui suit le point d'interrogation uniquement si celui ci est true ou contient de la data */}
                 {movies?.results?.map((movie, idx) => {
@@ -69,8 +69,8 @@ function MovieUpoming() {
 
                             <div className={idx === imageIndex ? classes.upcomingSlider : classes.activeUpcomingSlider}>
                                 <img src={`https://image.tmdb.org/t/p/w200` + movie.poster_path} alt={movie.title} />
-                                <div>
-                                    <h3 className={classes.upcommingDetail}>{movie.title}</h3>
+                                <div className={classes.upcommingDetail}>
+                                    <h3>{movie.title}</h3>
                                     <p>{movie.overview}</p>
                                 </div>
 

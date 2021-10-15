@@ -48,14 +48,14 @@ function MovieDetails(props) {
 
     const NextArrow = ({ onClick }) => {
         return (
-            <div className={classes.arrowRight} onClick={onClick}>
+            <div className={classes.arrowSimilarRight} onClick={onClick}>
                 <FaArrowRight />
             </div>
         )
     }
     const PrevArrow = ({ onClick }) => {
         return (
-            <div className={classes.arrowLeft} onClick={onClick}>
+            <div className={classes.arrowSimilarLeft} onClick={onClick}>
                 <FaArrowLeft />
             </div>
         )
@@ -81,7 +81,7 @@ function MovieDetails(props) {
                 <div className={classes.detailGraduent}></div>
                 <div className={classes.detailCard}>
                     <img src={`https://image.tmdb.org/t/p/w300` + movies.poster_path} />
-                    
+
                     <div className={classes.detail}>
                         <h1>{movies.title}</h1>
                         <p>{movies.overview}</p>
@@ -89,11 +89,9 @@ function MovieDetails(props) {
                 </div>
             </div>
 
-
-
-            <h1>Vous aimerez aussi :</h1>
-
             <div className={classes.similarCarousel}>
+                <h2>Vous aimerez aussi :</h2>
+
                 <Slider {...carouselSettings}>
                     {similars.map(similar => {
 
