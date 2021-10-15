@@ -16,8 +16,8 @@ function Favorites() {
 
     return (
         <div>
-            <h1>Votre liste de favoris</h1>
-            <div className={classes.favoriteSome}>{content}</div>
+            <h1 className={classes.favoriteTitle}>Votre liste de favoris</h1>
+            <div className={classes.favoriteContent}>{content}</div>
         </div>
     )
 }

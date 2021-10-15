@@ -34,13 +34,17 @@
 }
 
 
-.movieVote {
+.movieResume {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.movieVote p {
+.movieResume p {
     color: rgb(255, 174, 0);
     padding: 2rem;
+}
+
+.movieResume h3 {
+    color: white;
 }

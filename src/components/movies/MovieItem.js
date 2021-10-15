@@ -16,7 +16,8 @@ function MovieItem(props) {
             favoriteCtx.addFavorite({
                 id: props.id,
                 poster_path: props.poster_path,
-                original_title: props.original_title,
+                title: props.title,
+                vote_average: props.vote_average,
             })
         }
     }
@@ -26,7 +27,7 @@ function MovieItem(props) {
             <div>
                 <img src={`https://image.tmdb.org/t/p/w200` + props.poster_path} alt={props.original_title} />
             </div>
-            <div className={classes.movieVote}>
+            <div className={classes.movieResume}>
                 <h3>{props.title}</h3>
                 <p>{props.vote_average}/10</p>
             </div>
